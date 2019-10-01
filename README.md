@@ -9,10 +9,30 @@
 1. Submit a Pull Request back to the assignment repo
 1. Paste a link to of your Fork on Canvas and submit
 
+
+# Strings Lab 1
+
+## Instructions for lab submission
+
+1. Fork the assignment repo
+1. Clone your Fork to your machine
+1. Complete the lab
+1. Push your changes to your Fork
+1. Submit a Pull Request back to the assignment repo
+1. Paste a link to of your Fork on Canvas and submit
+
 ## Question 1
 
 Write code that prints out all the numbers from 1 to 10 as a single string.
 (Hint: the `String()` function can convert an Int to a String)
+```
+var numstring = ""
+for num in 1...10 {
+    numstring += String(num)
+}
+print(numstring)
+
+```
 
 ***
 ## Question 2
@@ -29,6 +49,15 @@ Write code that prints out every number ending in 4 between 1 and 60 as a single
 
 Print each character in the string `"Hello world!"`
 
+```
+var hello = "Hello World"
+
+for char in hello {
+    print(char)
+}
+
+```
+
 ***
 ## Question 5
 
@@ -36,23 +65,67 @@ Print out the last character in the string below.  You cannot use the Character 
 
 `let myStringSeven = "Hello world!"`
 
+```
+var myStringSeven = "Hello world!"
+
+let stringLastIndex = myStringSeven.endIndex
+let finalStringIndex = myStringSeven.index(before: stringLastIndex)
+let lastCharacter = myStringSeven[finalStringIndex]
+print(lastCharacter)
+
+```
+
 ***
 ## Question 6
 
 Write code that switches on a string, given the following conditions:
 - If the string's length is even, print out every character.
 - If the string's length is odd, print out every other character.
+```
+var counter = 0
+switch myStringSeven.count % 2 == 0{
+case myStringSeven.count != 0 :
+    print(myStringSeven)
 
+default:
+    for char in myStringSeven {
+        if counter % 2 == 0 {
+        print(char)
+        counter += 1
+        }
+        else {
+        counter += 1
+        }
+    }
+        
+}
+
+
+
+```
 ***
 ## Question 7
 
 Initialize a String with a character. Show that it is a Character, and not another String, that you're using to initialize it.
 
+```
+var String: Character = "a"
+
+```
+
 ***
 ## Question 8
 
 Build five pairs of **canonically equivalent** strings, the first of each being a pre-composed character and the second being one that uses combinable unicode scalars. Show that they are equivalent.
+```
+var character = "e"
+let unicodeLetterE = "\u{0065}"
+print(unicodeLetterE)
+if character == unicodeLetterE {
+    print("\(character) is equal to \(unicodeLetterE)")
+}
 
+```
 ***
 ## Question 9
 
@@ -62,7 +135,9 @@ Build five pairs of **canonically equivalent** strings, the first of each being 
 ## Question 10
 
 **Using only Unicode**, print out your name.
-
+```
+print( "\u{0069}\u{0061}\u{006e}")
+```
 ***
 ## Question 11
 
@@ -146,7 +221,7 @@ Output:
 `"olleH"`
 
 
-## 16. Mad-Libs! Add a value to the declared variables below in playgrounds. Insert the variables (already in correct order) inside the stringmadLib and print. 
+## 16. Mad-Libs! Add a value to the declared variables below in playgrounds. Insert the variables (already in correct order) inside the stringmadLib and print.
 
 ```swift
 
@@ -340,4 +415,3 @@ Sample Output1: `False`
 Sample Input2: `("aa", "aab")`
 
 Sample Output2: `True`
-
