@@ -38,11 +38,35 @@ print(numstring)
 ## Question 2
 
 Write code that prints out all the even numbers from 5 to 51 as a single string.
+```
 
+var numString = " "
+for num in 5...51 {
+    if num % 2 == 0 {
+        numString += String(num)
+    }
+}
+
+print(numString)
+
+
+```
 ***
 ## Question 3
 
 Write code that prints out every number ending in 4 between 1 and 60 as a single string.
+
+```
+var numString = " "
+for num in 1...60 {
+    if num % 10 == 4 {
+        numString += String(num)
+    }
+}
+
+print(numString)
+
+```
 
 ***
 ## Question 4
